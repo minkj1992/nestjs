@@ -9,8 +9,10 @@ export class Person {
   @Prop()
   name: string;
 
-  @Prop()
-  hobbies: Hobby[];
+  // to save ref of objects
+  // TODO: ref for what? id or name?
+  @Prop({ type: [Types.ObjectId], ref: Hobby.name })
+  hobbies: Types.ObjectId[];
 }
 
 export type PersonDocument = Person & Document;

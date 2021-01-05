@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Hobby, HobbySchema } from './hobby.model';
+import { HobbyService } from './hobby.service';
 
 @Module({
   imports: [
@@ -11,5 +12,6 @@ import { Hobby, HobbySchema } from './hobby.model';
       },
     ]),
   ],
+  providers: [HobbyService],
 })
 export class HobbyModule {}
