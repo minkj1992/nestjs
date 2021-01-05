@@ -7,8 +7,10 @@
 nest new <프로젝트 이름> --skip-git
 npm i @nestjs/mongoose mongoose
 npm i -D @types/mongoose
-nest g mo person && nest g mo hobby
-
+mkdir app
+cd src/app nest g mo person && nest g mo hobby
+cd src/app/person && nest g service person --flat
+cd src/app/hobby && nest g service hobby --flat
 ```
 
 ## 주의사항
