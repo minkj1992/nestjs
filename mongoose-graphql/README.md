@@ -11,6 +11,8 @@ mkdir app
 cd src/app nest g mo person && nest g mo hobby
 cd src/app/person && nest g service person --flat
 cd src/app/hobby && nest g service hobby --flat
+
+npm i @nestjs/common
 ```
 
 ## 주의사항
